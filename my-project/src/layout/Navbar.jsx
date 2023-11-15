@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -13,12 +14,12 @@ export default function Navbar() {
         AnalyteX
       </div>
       <ul className="flex gap-7 font-medium ">
-        <li>Registration</li>
-        <li>Resources</li>
-        <li>Initiative</li>
-        <li>Consultancy</li>
-        <li>Feedback</li>
-        <li>Stats</li>
+        <Link to="/">Registration</Link>
+        <Link to="/Resources">Resources</Link>
+        <Link to="/Initiative">Initiative</Link>
+        <Link to="/Consultancy">Consultancy</Link>
+        <Link to="/Feedback">Feedback</Link>
+        <Link to="/Stats">Stats</Link>
       </ul>
     </div>
   );
