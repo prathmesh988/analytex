@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply bg-black text-white font-bold py-2 px-4 rounded;
+  }
+
+  .heading {
+    @apply text-2xl font-bold;
+  }
+
+  .subheading {
+    @apply text-xl font-bold;
+  }
+
+  .text {
+    @apply text-lg;
+  }
+}
+
+body {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.login-bg {
+  background-image: url("https://wallpapers.com/images/high/tea-party-background-tgslum7svrdtoeyf.webp");
+  z-index: -1;
+  opacity: 0.2;
+}
