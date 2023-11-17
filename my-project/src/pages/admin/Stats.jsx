@@ -11,7 +11,7 @@ import {
   Flex,
   ProgressBar,
 } from "@tremor/react";
-import AdminTable from "../components/AdminTable";
+import AdminTable from "../../components/AdminTable";
 const chartdata = [
   {
     date: "Jan 22",
@@ -82,7 +82,7 @@ function KpiCard() {
 }
 
 const Stats = () => (
-  <div className="px-10 flex flex-col gap-1">
+  <div className="flex flex-col gap-1">
     <h1 className="text-black text-3xl font-bold pb-4">Admin Page</h1>
 
     <div className="flex gap-1">

@@ -18,30 +18,57 @@ export default function Registration() {
     }));
   };
 
+  //   const handleSubmit = async (e) => {
+  //     e.preventDefault();
+  //     console.log(formState);
+  //     try {
+  //       const response = await fetch("http://localhost:8080/api2", {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify(formState),
+  //       });
+
+  //       const data = await response.json();
+
+  //       console.log("Form submitted successfully:", data);
+  //     } catch (error) {
+  //       console.error("Error submitting form:", error);
+  //     }
+  //   };
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    // Log the form data to the console
+    console.log("Form submitted with data:", formState);
+  };
+
   return (
     <>
       <div className="absolute top-0 left-0 w-screen h-screen login-bg "></div>
       <div className=" w-screen flex flex-col items-center py-16">
         <h1 className="text-5xl font-semibold mt-20">Join Us</h1>
-        <form action="" className="mt-10 w-[400px]">
+        <form onSubmit={handleSubmit} className="mt-10 w-[400px]">
           <div className="flex flex-col gap-3">
             <label htmlFor="email" className="font-semibold ">
-              Email
+              email
             </label>
             <input
               onChange={handleInputChange}
               type="text"
               name="email"
               id=""
-              placeholder="email address"
+              placeholder="email"
               className="border-[1px] p-2 rounded-md"
             />
-            <label htmlFor="email" className="font-semibold ">
-              Password
+            <label htmlFor="password" className="font-semibold ">
+              password
             </label>
             <input
+              onChange={handleInputChange}
               type="text"
-              name="Password"
+              name="password"
               id=""
               placeholder="password"
               className="border-[1px] p-2 rounded-md"
