@@ -15,10 +15,14 @@ import AdminPageLayout from "./layout/AdminPageLayout";
 
 const Layout = () => {
   return (
-    <>
+    <div className="flex flex-col items-center ">
       <Navbar />
-      <Outlet />
-    </>
+      <div>
+        <div className="h-[100vh]">
+          <Outlet />
+        </div>
+      </div>
+    </div>
   );
 };
 

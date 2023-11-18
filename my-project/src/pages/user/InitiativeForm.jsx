@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { TextInput } from "@tremor/react";
 
 export default function InitiativeForm() {
   const [formState, setFormState] = useState({
@@ -48,98 +49,106 @@ export default function InitiativeForm() {
     console.log("Form submitted with data:", formState);
   };
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col">
-      <label htmlFor="nameofevent">
-        <input
-          type="text"
-          name="nameofevent"
-          id="CompannameofeventyName"
-          placeholder="name of event"
-          onChange={handleInputChange}
-        />
-      </label>
-      <label htmlFor="organising_committee">
-        <input
-          type="text"
-          name="organising_committee"
-          id="organising_committee"
-          placeholder="organising_committee"
-          onChange={handleInputChange}
-        />
-      </label>
-      <label htmlFor="email">
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email"
-          onChange={handleInputChange}
-        />
-      </label>
-      <label htmlFor="mob">
-        <input
-          type="text"
-          name="mob"
-          id="mob"
-          placeholder="mob"
-          onChange={handleInputChange}
-        />
-      </label>
-      <label htmlFor="date">
-        <input
-          type="text"
-          name="date"
-          id="date"
-          placeholder="date"
-          onChange={handleInputChange}
-        />
-      </label>
-      <label htmlFor="time">
-        <input
-          type="text"
-          name="time"
-          id="time"
-          placeholder="time"
-          onChange={handleInputChange}
-        />
-      </label>
-      <label htmlFor="venue">
-        <input
-          type="text"
-          name="venue"
-          id="venue"
-          placeholder="venue"
-          onChange={handleInputChange}
-        />
-      </label>
-      <label htmlFor="city">
-        <input
-          type="text"
-          name="city"
-          id="city"
-          placeholder="city"
-          onChange={handleInputChange}
-        />
-      </label>
-      <label htmlFor="motive">
-        <input
-          type="text"
-          name="motive"
-          id="motive"
-          placeholder="motive"
-          onChange={handleInputChange}
-        />
-      </label>
-      <label htmlFor="capacity">
-        <input
-          type="text"
-          name="capacity"
-          id="capacity"
-          placeholder="capacity"
-          onChange={handleInputChange}
-        />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
+    <div>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+        <div className="flex  gap-2">
+          <label htmlFor="nameofevent">
+            <TextInput
+              type="text"
+              name="nameofevent"
+              id="CompannameofeventyName"
+              placeholder="name of event"
+              onChange={handleInputChange}
+            />
+          </label>
+          <label htmlFor="organising_committee">
+            <TextInput
+              type="text"
+              name="organising_committee"
+              id="organising_committee"
+              placeholder="organising_committee"
+              onChange={handleInputChange}
+            />
+          </label>
+        </div>
+        <label htmlFor="email">
+          <TextInput
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            onChange={handleInputChange}
+          />
+        </label>
+        <label htmlFor="mob">
+          <TextInput
+            type="text"
+            name="mob"
+            id="mob"
+            placeholder="mob"
+            onChange={handleInputChange}
+          />
+        </label>
+        <div className="flex gap-2">
+          <label htmlFor="date">
+            <TextInput
+              type="text"
+              name="date"
+              id="date"
+              placeholder="date"
+              onChange={handleInputChange}
+            />
+          </label>
+          <label htmlFor="time">
+            <TextInput
+              type="text"
+              name="time"
+              id="time"
+              placeholder="time"
+              onChange={handleInputChange}
+            />
+          </label>
+        </div>
+        <label htmlFor="venue">
+          <TextInput
+            type="text"
+            name="venue"
+            id="venue"
+            placeholder="venue"
+            onChange={handleInputChange}
+          />
+        </label>
+        <label htmlFor="city">
+          <TextInput
+            type="text"
+            name="city"
+            id="city"
+            placeholder="city"
+            onChange={handleInputChange}
+          />
+        </label>
+        <label htmlFor="motive">
+          <TextInput
+            type="text"
+            name="motive"
+            id="motive"
+            placeholder="motive"
+            onChange={handleInputChange}
+          />
+        </label>
+        <label htmlFor="capacity">
+          <TextInput
+            type="text"
+            name="capacity"
+            id="capacity"
+            placeholder="capacity"
+            onChange={handleInputChange}
+          />
+        </label>
+        <button type="submit" className="btn">
+          Submit
+        </button>
+      </form>
+    </div>
   );
 }

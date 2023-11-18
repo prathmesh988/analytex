@@ -4,7 +4,7 @@ const bgImage = () => {
   return;
 };
 
-export default function Registration() {
+export default function login() {
   const [formState, setFormState] = useState({
     email: "",
     password: "",
@@ -48,10 +48,10 @@ export default function Registration() {
     <>
       <div className="absolute top-0 left-0 w-screen h-screen login-bg "></div>
       <div className=" w-screen flex flex-col items-center py-16">
-        <h1 className="text-5xl font-semibold mt-20">Join Us</h1>
+        <h1 className="text-5xl font-semibold mt-20 text-white">Join Us</h1>
         <form onSubmit={handleSubmit} className="mt-10 w-[400px]">
           <div className="flex flex-col gap-3">
-            <label htmlFor="email" className="font-semibold ">
+            <label htmlFor="email" className="font-semibold text-white">
               email
             </label>
             <input
@@ -62,7 +62,7 @@ export default function Registration() {
               placeholder="email"
               className="border-[1px] p-2 rounded-md"
             />
-            <label htmlFor="password" className="font-semibold ">
+            <label htmlFor="password" className="font-semibold text-white">
               password
             </label>
             <input

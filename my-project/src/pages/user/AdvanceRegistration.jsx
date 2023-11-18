@@ -10,6 +10,7 @@ import {
   TabPanel,
   TabPanels,
   Text,
+  TextInput,
 } from "@tremor/react";
 
 import { UserGroupIcon, UserIcon } from "@heroicons/react/solid";
@@ -50,9 +51,9 @@ const UserForm = () => {
     console.log("Form submitted with data:", formState);
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-[40vw]">
       <label htmlFor="name">
-        <input
+        <TextInput
           type="text"
           name="name"
           id="name"
@@ -61,7 +62,7 @@ const UserForm = () => {
         />
       </label>
       <label htmlFor="address">
-        <input
+        <TextInput
           type="text"
           name="address"
           id="address"
@@ -70,7 +71,7 @@ const UserForm = () => {
         />
       </label>
       <label htmlFor="mob">
-        <input
+        <TextInput
           type="text"
           name="mob"
           id="mob"
@@ -79,7 +80,7 @@ const UserForm = () => {
         />
       </label>
       <label htmlFor="password">
-        <input
+        <TextInput
           type="password"
           name="password"
           id="password"
@@ -88,7 +89,7 @@ const UserForm = () => {
         />
       </label>
       <label htmlFor="confirmPassword">
-        <input
+        <TextInput
           type="password"
           name="confirmPassword"
           id="confirmPassword"
@@ -147,9 +148,9 @@ const CompanyForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-[40vw]">
       <label htmlFor="CompanyName" className="font-semibold ">
-        <input
+        <TextInput
           onChange={handleInputChange}
           type="text"
           name="CompanyName"
@@ -158,7 +159,7 @@ const CompanyForm = () => {
         />
       </label>
       <label htmlFor="address" className="font-semibold ">
-        <input
+        <TextInput
           onChange={handleInputChange}
           type="text"
           name="address"
@@ -167,7 +168,7 @@ const CompanyForm = () => {
         />
       </label>
       <label htmlFor="mobile" className="font-semibold ">
-        <input
+        <TextInput
           onChange={handleInputChange}
           type="text"
           name="mobile"
@@ -176,7 +177,7 @@ const CompanyForm = () => {
         />
       </label>
       <label htmlFor="email" className="font-semibold ">
-        <input
+        <TextInput
           onChange={handleInputChange}
           type="text"
           name="email"
@@ -185,7 +186,7 @@ const CompanyForm = () => {
         />
       </label>
       <label htmlFor="password" className="font-semibold ">
-        <input
+        <TextInput
           onChange={handleInputChange}
           type="text"
           name="password"
@@ -204,7 +205,7 @@ const CompanyForm = () => {
 export const TabExample = () => {
   return (
     <Card className="w-max">
-      <Text>Total Sales</Text>
+      <Text className="font-bold text-3xl">Verify Yourself</Text>
       <TabGroup>
         <TabList className="mt-8">
           <Tab icon={UserGroupIcon}>USER</Tab>
@@ -225,8 +226,11 @@ export const TabExample = () => {
 
 export default function AdvanceRegistration() {
   return (
-    <>
+    <div className="">
+      <div>
+        <h1>Verify Your Company</h1>
+      </div>
       <TabExample />
-    </>
+    </div>
   );
 }

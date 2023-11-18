@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Textarea } from "@tremor/react";
 
 export default function FeedbackForm() {
   const [formState, setFormState] = useState({
@@ -36,7 +37,8 @@ export default function FeedbackForm() {
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="feedback">
-        <input
+        FeedBack
+        <Textarea
           type="text"
           name="feedback"
           id="feedback"

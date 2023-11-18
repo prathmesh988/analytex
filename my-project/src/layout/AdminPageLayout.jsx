@@ -6,7 +6,9 @@ export default function AdminPageLayout() {
   return (
     <div className="flex overflow-x-hidden">
       <AdminSideBar />
-      <Outlet />
+      <div className="flex-grow overflow-y-auto">
+        <Outlet />
+      </div>
     </div>
   );
 }
