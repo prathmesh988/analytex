@@ -49,8 +49,9 @@ export default function InitiativeForm() {
     console.log("Form submitted with data:", formState);
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+    <div className="w-[100%] h-[100%] flex items-center">
+    <div className="">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-2 ">
         <div className="flex  gap-2">
           <label htmlFor="nameofevent">
             <TextInput
@@ -149,6 +150,7 @@ export default function InitiativeForm() {
           Submit
         </button>
       </form>
+    </div>
     </div>
   );
 }
